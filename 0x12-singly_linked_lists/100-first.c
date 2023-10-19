@@ -1,19 +1,13 @@
-#include <stdlib.h>
-#include "lists.h"
-/**
- * list_len - returns the number of elements in a linked list
- * @h: pointer to the list_t list
- *
- * Return: number of elements in h
- */
-size_t list_len(const list_t *h)
-{
-	size_t n = 0;
+#include <stdio.h>
 
-	while (h)
-	{
-		n++;
-		h = h->next;
-	}
-	return (n);
+void first(void) __attribute__ ((constructor));
+
+/**
+ * first - prints a sentence before the main
+ * function is executed
+ */
+void first(void)
+{
+	printf("You're beat! and yet, you must allow,\n");
+	printf("I bore my house upon my back!\n");
 }
